@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <title>Manage Employee</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+        integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/global.css">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <div class="manage-system">
+        <!-- LIST DISPLAY EMLOYEE -->
+        <div class="list-control-emploee container-fluid mt-5">
+            <div class="head-form d-flex justify-content-between">
+                <div class="title">
+                    <h3>Employee List</h3>
+                </div>
+                <div class="btn-add-employee align-center">
+                    <button id="add-emp">Add new employee</button>
+                </div>
+            </div>
+            <div class="find-employee d-flex">
+                <input type="text" placeholder="Type of employee">
+                <button>
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </button>
+            </div>
+            <div class="col-1.2 mx-auto">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>Account</th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Password</th>
+                            <th>Date of working</th>
+                            <th>Salary</th>
+                            <th>Work position</th>
+                            <th>Working time in month</th>
+                            <th>Total salary</th>
+                            <th>Type</th>
+                        </tr>
+                    </thead>
+                    <tbody id="show-list" class="col-12">
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- FORM LOG IN -->
+        <form class="form-login container text-center py-5"
+        id="form-login">
+            <h3 style="padding-bottom: 20px;">Log In</h3>
+            <div class="input-form">
+                <label for="input-acc">
+                    <i class="fa-solid fa-user"></i>
+                </label>
+                <input type="text" placeholder="Account" 
+                id="input-acc">
+            </div>
+            <div class="input-form">
+                <label for="input-name">
+                    <i class="fa-solid fa-signature"></i>
+                </label>
+                <input type="text" placeholder="Full name" 
+                id="input-name">
+            </div>
+            <div class="input-form">
+                <label for="input-email">
+                    <i class="fa-solid fa-envelope"></i>
+                </label>
+                <input type="email" placeholder="Email" 
+                id="input-email">
+            </div>
+            <div class="input-form">
+                <label for="input-password">
+                    <i class="fa-solid fa-lock"></i>
+                </label>
+                <input type="password" placeholder="Password" 
+                id="input-password">
+            </div>
+            <div class="input-form">
+                <label for="input-date">
+                    <i class="fa-solid fa-calendar-days"></i>
+                </label>
+                <input type="date" id="input-date">
+            </div>
+            <div class="input-form">
+                <label for="input-salary">
+                    <i class="fa-solid fa-money-bill"></i>
+                </label>
+                <input type="text" placeholder="Basic salary" 
+                id="input-salary">
+            </div>
+            <div class="input-form">
+                <label for="input-position">
+                    <i class="fa-solid fa-briefcase"></i>
+                </label>
+                <select id="input-position">
+                    <option value="null">
+                        Select position
+                    </option>
+                    <option value="manager">
+                        Manager
+                    </option>
+                    <option value="Dmanager">
+                        Department manager
+                    </option>
+                    <option value="employee">
+                        Employee
+                    </option>
+                </select>
+            </div>
+            <div class="input-form">
+                <label for="input-time">
+                    <i class="fa-solid fa-clock"></i>
+                </label>
+                <input type="text" placeholder="Work time" 
+                id="input-time">
+            </div>
+            <div class="btn-form d-flex justify-content-end">
+                <div class="btn-add">
+                    <button type="button"
+                    id="btn-add">Add user</button>
+                </div>
+                <div class="btn-update"">
+                    <button type="button"
+                    id="btn-update">Update</button>
+                </div>
+                <div class="btn-close">
+                    <button type="button"
+                    id="btn-close">Close</button>
+                </div>
+            </div>
+        </form>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+        integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
+    <script src="./js/main/Main.js" type="module"></script>
+</body>
+
+</html>

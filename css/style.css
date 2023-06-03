@@ -1,0 +1,78 @@
+
+.manage-system {
+    position: relative;
+}
+
+.find-employee{
+    width: 100%;
+}
+
+.find-employee input{
+    width: 100%;
+    display: inline-block;
+}
+
+.form-login{
+    background-color: #f9f9f8;
+    width: 500px;
+    height: 650px;
+    padding: 30px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-left:-250px;
+    margin-top:-50px;
+    display: none;
+}
+
+.form-login i{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    background-color: rgb(230 233 236);
+    text-align: center;
+    cursor: pointer;
+}
+
+.input-form{
+    margin-bottom: 20px;
+}
+
+.input-form input{
+    width: 70%;
+}
+
+.input-form select {
+    width: 70%;
+}
+
+.btn-add button{
+    width: 150px;
+    margin-right: 20px;
+    color: white;
+    background-color: green;
+}
+
+.btn-update button{
+    width: 100px;
+    margin-right: 20px;
+    color: white;
+    background-color: green;
+}
+
+.btn-close button{
+    margin-right: 20px;
+    background-color: rgb(222 63 78);
+    color: white;
+    border: 1px solid rgb(222 63 78);
+}
+
+#btn-startUpdate{
+    background-color: green;
+    color: white;
+}
+
+#btn-remove{
+    background-color: rgb(222 63 78);
+    color: white;
+}
