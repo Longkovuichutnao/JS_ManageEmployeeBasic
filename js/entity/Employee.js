@@ -12,8 +12,4 @@ export function Employee(acc, name, email,
         this.workTime = workTime;
         this.totalSalary = totalSalary;
         this.type = type;
-
-        this.getAcc = function () {
-                return this.acc;
-        }
 }

@@ -59,7 +59,7 @@
         </div>
 
         <!-- FORM LOG IN -->
-        <form class="form-login container text-center py-5"
+        <form class="form-login container text-center my-5"
         id="form-login">
             <h3 style="padding-bottom: 20px;">Log In</h3>
             <div class="input-form">
@@ -68,6 +68,8 @@
                 </label>
                 <input type="text" placeholder="Account" 
                 id="input-acc">
+                <p id="mess-err-acc" class="red-warning">ERROR: must be input length 4-6</p>
+                <p id="mess-err-acc-existed" class="red-warning">ERROR: account existed !!!</p>
             </div>
             <div class="input-form">
                 <label for="input-name">
@@ -75,6 +77,7 @@
                 </label>
                 <input type="text" placeholder="Full name" 
                 id="input-name">
+                <p id="mess-err-name" class="red-warning">ERROR: must be input valid name</p>
             </div>
             <div class="input-form">
                 <label for="input-email">
@@ -82,6 +85,7 @@
                 </label>
                 <input type="email" placeholder="Email" 
                 id="input-email">
+                <p id="mess-err-email" class="red-warning">ERROR: must be input valid email</p>
             </div>
             <div class="input-form">
                 <label for="input-password">
@@ -89,12 +93,14 @@
                 </label>
                 <input type="password" placeholder="Password" 
                 id="input-password">
+                <p id="mess-err-password" class="red-warning">ERROR: Password from 6-10 characters (contains at least 1 numeric character, 1 uppercase character, 1 special character), no blank</p>
             </div>
             <div class="input-form">
                 <label for="input-date">
                     <i class="fa-solid fa-calendar-days"></i>
                 </label>
                 <input type="date" id="input-date">
+                <p id="mess-err-date" class="red-warning">ERROR: wrong date, date must after current date</p>
             </div>
             <div class="input-form">
                 <label for="input-salary">
@@ -102,6 +108,7 @@
                 </label>
                 <input type="text" placeholder="Basic salary" 
                 id="input-salary">
+                <p id="mess-err-salary" class="red-warning">ERROR: Basic salary 1 000 000 - 20 000 000, no blank</p>
             </div>
             <div class="input-form">
                 <label for="input-position">
@@ -121,6 +128,7 @@
                         Employee
                     </option>
                 </select>
+                <p id="mess-err-position" class="red-warning">ERROR: must choose one of three position</p>
             </div>
             <div class="input-form">
                 <label for="input-time">
@@ -128,6 +136,7 @@
                 </label>
                 <input type="text" placeholder="Work time" 
                 id="input-time">
+                <p id="mess-err-time" class="red-warning">ERROR: Number of working hours in the month 80 - 200 hours, not blank</p>
             </div>
             <div class="btn-form d-flex justify-content-end">
                 <div class="btn-add">
@@ -158,6 +167,7 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script src="./js/main/Main.js" type="module"></script>
+    <!-- <script src="./js/utils/Validation.js"></script> -->
 </body>
 
 </html>
