@@ -20,7 +20,7 @@ function getLocalStorage() {
 getLocalStorage();
 function displayListLocal(dataLocal) {
     var resultListLocal = "";
-    dataLocal.map(function(employee) {
+    dataLocal.map(function (employee) {
         var row = `<tr>
             <td>${employee.acc}</td>
             <td>${employee.name}</td>
@@ -74,9 +74,9 @@ document.getElementById("btn-close").onclick = closeForm;
 
 
 function displayList() {
-    var resultList = "";
-    listEmployee.map(function(employee) {
-        var row = `<tr>
+    let resultList = "";
+    listEmployee.map(function (employee) {
+        let row = `<tr>
             <td>${employee.acc}</td>
             <td>${employee.name}</td>
             <td>${employee.email}</td>
@@ -163,5 +163,42 @@ function addEmployee() {
 document.getElementById("btn-add").onclick = addEmployee;
 
 
+function displayFound (listFound) {
+    let resultList = "";
+    listFound.map(function (employee) {
+        let row = `<tr>
+            <td>${employee.acc}</td>
+            <td>${employee.name}</td>
+            <td>${employee.email}</td>
+            <td>${employee.password}</td>
+            <td>${employee.date}</td>
+            <td>${employee.salary}</td>
+            <td>${employee.position}</td>
+            <td>${employee.workTime}</td>
+            <td>${employee.totalSalary}</td>
+            <td>${employee.type}</td>
+            <td>
+                <button onclick="displayToUpdate('${employee.acc}')" id="btn-startUpdate">
+                    Update
+                </button>
+                <button onclick="removeEmployee('${employee.acc}')" id="btn-remove">
+                    Delete
+                </button>
+            </td>
+        </tr>`;
+        resultList += row;
+    });
+    document.getElementById("show-list").innerHTML = resultList;
+}
 
-
+let search = () => {
+    const searchValue = document.getElementById("find-type").value.toUpperCase();
+    let listFound = listEmployee.filter(function (employee) {
+        return employee.type.toUpperCase().includes(searchValue);
+    });
+    displayFound(listFound);
+}
+window.search = search;
+//thuc ra cai nay khong can thiet trong bai nay lam, nhung ma em thay tren youtube ngoai vua search vua hien ra thi
+//no con co 1 icon tim kiem o ben canh nen em cho vao cho dep mat thoi a.
+document.getElementById("find-type-icon").onclick = search;

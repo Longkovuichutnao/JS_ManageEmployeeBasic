@@ -59,9 +59,14 @@ function getType(workTime) {
 /**
  * function to create new employee based on user inputed
  * 
+ * 
  * @returns new employee object
+ * if the employee has <strong>one infor wrong validate </strong>
+ * the flag is upper.
+ *  <br> if the flag equals 0, returns new object of employee,
+ * other wise returns null.
  */
-export function getInfor(choice) {
+export function getInfor() {
     var flag = 0;
     //check validate and get value of account
     var acc = document.getElementById("input-acc").value;
@@ -138,6 +143,10 @@ export function getInfor(choice) {
     } else {
         document.getElementById("mess-err-time").style.display = "none";
     }
+    
+    /**
+     * check the employee has already valid format validate before
+     */
     let employee;
     if (flag == 0) {
         var totalSalary = getTotalSalary(position, salary);
